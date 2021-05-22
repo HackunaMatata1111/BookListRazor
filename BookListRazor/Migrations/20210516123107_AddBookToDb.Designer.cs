@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookListRazor.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201109050250_AddISBNToBookModel")]
-    partial class AddISBNToBookModel
+    [Migration("20210516123107_AddBookToDb")]
+    partial class AddBookToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,14 +27,35 @@ namespace BookListRazor.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Author")
+                    b.Property<string>("Emailid")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ISBN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("FName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Pincode")
+                        .HasColumnType("int");
+
+                    b.Property<string>("city")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("line1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("line2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("line3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("product")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("state")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
