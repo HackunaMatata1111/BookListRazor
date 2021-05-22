@@ -22,7 +22,20 @@
                                 <label asp-for="Books.FirstOrDefault().FName"></label>
                             </th>
                             <th>
-                                @Html.DisplayNameFor(m => m.Books.FirstOrDefault().LName)
+                                <label asp-for="Books.FirstOrDefault().LName"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().Emailid"></label>
+                            </th>
+
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().line1"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().city"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().state"></label>
                             </th>
                             <th>
 
@@ -30,18 +43,30 @@
                         </tr>
                         @foreach (var item in Model.Books)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(m => item.FName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(m => item.LName)
-                                </td>
-                                <td>
-                                    <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
-                                    <a asp-page="Edit" asp-route-id="@item.Id" button class="btn btn-success btn-sm">Edit222</a>
-                                </td>
-                            </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => item.FName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.LName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Emailid)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.line1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.city)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.state)
+                        </td>
+                        <td>
+                            <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                            <a asp-page="Edit" asp-route-id="@item.Id" button class="btn btn-success btn-sm">Edit222</a>
+                        </td>
+                    </tr>
                         }
 
                     </table>
