@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BookListRazor.Pages.BookList
 {
-    public class DonateEwasteModel : PageModel
+    public class DonateModel : PageModel
     {
         private readonly ApplicationDbContext _db;
 
-        public DonateEwasteModel(ApplicationDbContext db)
+        public DonateModel(ApplicationDbContext db)
         {
             _db = db;
         }
@@ -29,7 +29,7 @@ namespace BookListRazor.Pages.BookList
             {
                 await _db.Book.AddAsync(Book);
                 await _db.SaveChangesAsync();
-                return RedirectToPage("SelectDonate");
+                return RedirectToPage("Index");
             }
             else
             {

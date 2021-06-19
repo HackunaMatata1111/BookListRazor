@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookListRazor.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210516123107_AddBookToDb")]
+    [Migration("20210530203044_AddBookToDb")]
     partial class AddBookToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,7 +27,12 @@ namespace BookListRazor.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<long>("ContactNo")
+                        .HasColumnType("bigint")
+                        .HasMaxLength(10);
+
                     b.Property<string>("Emailid")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FName")
@@ -35,12 +40,15 @@ namespace BookListRazor.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Pincode")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasMaxLength(6);
 
                     b.Property<string>("city")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("line1")
@@ -49,13 +57,8 @@ namespace BookListRazor.Migrations
                     b.Property<string>("line2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("line3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("product")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("state")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

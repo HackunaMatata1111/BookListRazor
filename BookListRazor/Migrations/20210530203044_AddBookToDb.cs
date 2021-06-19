@@ -13,15 +13,14 @@ namespace BookListRazor.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FName = table.Column<string>(nullable: false),
-                    LName = table.Column<string>(nullable: true),
-                    Emailid = table.Column<string>(nullable: true),
-                    product = table.Column<string>(nullable: true),
+                    LName = table.Column<string>(nullable: false),
+                    Emailid = table.Column<string>(nullable: false),
+                    ContactNo = table.Column<long>(maxLength: 10, nullable: false),
                     line1 = table.Column<string>(nullable: true),
                     line2 = table.Column<string>(nullable: true),
-                    line3 = table.Column<string>(nullable: true),
-                    city = table.Column<string>(nullable: true),
-                    state = table.Column<string>(nullable: true),
-                    Pincode = table.Column<int>(nullable: false)
+                    city = table.Column<string>(nullable: false),
+                    state = table.Column<string>(nullable: false),
+                    Pincode = table.Column<int>(maxLength: 6, nullable: false)
                 },
                 constraints: table =>
                 {

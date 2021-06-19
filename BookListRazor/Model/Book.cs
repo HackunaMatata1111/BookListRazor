@@ -10,16 +10,31 @@ namespace BookListRazor.Model
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         public string FName { get; set; }
+
+        [Required]
         public string LName { get; set; }
+
+        [Required]
         public string Emailid { get; set; }
-        public string product { get; set; }
+
+        [MaxLength(10, ErrorMessage = "Contact number cannot be longer than 10 characters.")]
+        public long ContactNo { get; set; }
+
         public string line1 { get; set; }
+
         public string line2 { get; set; }
-        public string line3 { get; set; }
+
+        [Required]
         public string city { get; set; }
+
+        [Required]
         public string state { get; set; }
+
+        
+        [MaxLength(6, ErrorMessage = "Pincode cannot be longer than 6 characters.")]
         public int Pincode { get; set; }
     }
 }

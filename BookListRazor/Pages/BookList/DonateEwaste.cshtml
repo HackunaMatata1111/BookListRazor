@@ -2,7 +2,7 @@
 @model BookListRazor.Pages.BookList.DonateEwasteModel
 
 <br/>
-<h2 class="text-info">Create New Book</h2>
+<h2 class="text-info">Please provide employee details below to continue: </h2>
 <br/>
 
 <div class=" border container" style="padding: 30px">
@@ -10,7 +10,7 @@
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.FName"></label>
+                <label asp-for="Book.FName">First Name:</label>
             </div>
             <div class="col-6">
                 <input asp-for="Book.FName"></input>
@@ -19,7 +19,7 @@
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.LName"></label>
+                <label asp-for="Book.LName">Last Name:</label>
             </div>
             <div class="col-6">
                 <input asp-for="Book.LName"></input>
@@ -28,7 +28,7 @@
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.Emailid"></label>
+                <label asp-for="Book.Emailid">Deloitte EmailID:</label>
             </div>
             <div class="col-6">
                 <input asp-for="Book.Emailid"></input>
@@ -37,16 +37,37 @@
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.line1"></label>
+                <label asp-for="Book.ContactNo">Contact Number:</label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.line1"></input>
+                <input asp-for="Book.ContactNo"></input>
+            </div>
+            <span asp-validation-for="Book.ContactNo" class="text-danger"></span>
+        </div>
+
+        <p>Provide the pickup location:</p>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.line1">Address Line 1:</label>
+            </div>
+            <div class="col-6">
+                <textarea asp-for="Book.line1" name="w3review" rows="1" cols="50"></textarea>
             </div>
             <span asp-validation-for="Book.line1" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.city"></label>
+                <label asp-for="Book.line2">Address Line 2:</label>
+            </div>
+            <div class="col-6">
+                <textarea asp-for="Book.line2" name="w3review" rows="1" cols="50"></textarea>
+            </div>
+            <span asp-validation-for="Book.line2" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.city">City:</label>
             </div>
             <div class="col-6">
                 <input asp-for="Book.city"></input>
@@ -55,7 +76,7 @@
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.state"></label>
+                <label asp-for="Book.state">State:</label>
             </div>
             <div class="col-6">
                 <input asp-for="Book.state"></input>
@@ -63,11 +84,20 @@
             <span asp-validation-for="Book.state" class="text-danger"></span>
         </div>
         <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.Pincode">Pincode:</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.Pincode"></input>
+            </div>
+            <span asp-validation-for="Book.Pincode" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
             <div class="col-3 offset-3">
-                <input type="submit" value="Create" class="btn btn-primary form-control" />
+                <a asp-page="SurveyEwaste" class="btn btn-success form-control">Back to Survey</a> @*text-white*@
             </div>
             <div class="col-3">
-                <a asp-page="Index" class="btn btn-success form-control">Back to List</a> @*text-white*@
+                <input type="submit" value="Next" class="btn btn-primary form-control" />
             </div>
         </div>
     </form>
