@@ -1,78 +1,325 @@
 ﻿@page
 @model BookListRazor.Pages.BookList.SurveyEwasteModel
 
-<br/>
-<h2 class="text-info">Create New Book</h2>
-<br/>
+<br />
+<h2 class="text-info">Answer the following Survey Questions</h2>
+<br />
 
 <div class=" border container" style="padding: 30px">
     <form method="post">
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.FName"></label>
+                <label asp-for="SurveyEwaste.question">Question 1 : </label>
             </div>
-            <div class="col-6">
-                <input asp-for="Book.FName"></input>
-            </div>                      
-            <span asp-validation-for="Book.FName" class="text-danger"></span>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
         <div class="form-group row">
-            <div class="col-3">
-                <label asp-for="Book.LName"></label>
+            <div class="col-6">
+                <input type="radio" id="Q101" name="Question1" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            @*@Html.RadioButtonFor(model => model.gender, "Female", new { @checked = true })*@
+
+            <div class="col-6">
+                <input type="radio" id="Q1O2" name="Question1" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q1O3" name="Question1" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.LName"></input>
+                <input type="radio" id="Q1O4" name="Question1" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
             </div>
-            <span asp-validation-for="Book.LName" class="text-danger"></span>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
+
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.Emailid"></label>
+                <label asp-for="SurveyEwaste.question">Question 2 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q2O1" name="Question2" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Emailid"></input>
+                <input type="radio" id="Q2O2" name="Question2" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
             </div>
-            <span asp-validation-for="Book.Emailid" class="text-danger"></span>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
+
         <div class="form-group row">
-            <div class="col-3">
-                <label asp-for="Book.line1"></label>
+            <div class="col-6">
+                <input type="radio" id="Q2O3" name="Question2" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.line1"></input>
+                <input type="radio" id="Q2O4" name="Question2" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
             </div>
-            <span asp-validation-for="Book.line1" class="text-danger"></span>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
+
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Book.city"></label>
+                <label asp-for="SurveyEwaste.question">Question 3 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q3O1" name="Question3" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.city"></input>
+                <input type="radio" id="Q3O2" name="Question3" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
             </div>
-            <span asp-validation-for="Book.city" class="text-danger"></span>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
+
         <div class="form-group row">
-            <div class="col-3">
-                <label asp-for="Book.state"></label>
+            <div class="col-6">
+                <input type="radio" id="Q3O3" name="Question3" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.state"></input>
+                <input type="radio" id="Q3O4" name="Question3" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
             </div>
-            <span asp-validation-for="Book.state" class="text-danger"></span>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="SurveyEwaste.question">Question 4 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
         <div class="form-group row">
-            <div class="col-3 offset-3">
-                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            <div class="col-6">
+                <input type="radio" id="Q4O1" name="Question4" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
             </div>
+            <div class="col-6">
+                <input type="radio" id="Q4O2" name="Question4" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q4O3" name="Question4" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q4O4" name="Question4" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
             <div class="col-3">
-                <a asp-page="DonateEwaste" class="btn btn-success form-control">Next</a> @*text-white*@
+                <label asp-for="SurveyEwaste.question">Question 5 : </label>
             </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q5O1" name="Question5" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q5O2" name="Question5" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q5O3" name="Question5" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q5O4" name="Question5" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="SurveyEwaste.question">Question 6 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q6O1" name="Question6" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q6O2" name="Question6" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q6O3" name="Question6" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q6O4" name="Question6" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="SurveyEwaste.question">Question 7 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q7O1" name="Question7" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q7O2" name="Question7" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q7O3" name="Question7" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q7O4" name="Question7" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="SurveyEwaste.question">Question 8 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q8O1" name="Question8" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q8O2" name="Question8" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q8O3" name="Question8" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q8O4" name="Question8" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="SurveyEwaste.question">Question 9 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q9O1" name="Question9" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q9O2" name="Question9" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q9O3" name="Question9" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q9O4" name="Question9" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="SurveyEwaste.question">Question 10 : </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q10O1" name="Question10" value="1">
+                <label asp-for="SurveyEwaste.option">Option 1</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q10O2" name="Question10" value="2">
+                <label asp-for="SurveyEwaste.option">Option 2</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q10O3" name="Question10" value="3">
+                <label asp-for="SurveyEwaste.option">Option 3</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q10O4" name="Question10" value="4">
+                <label asp-for="SurveyEwaste.option">Option 4</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-3 offset-5">
+                <input type="submit" value="Save & Next" class="btn btn-primary form-control" />
+            </div>
+            
         </div>
     </form>
 
 </div>
-@section Scripts{ 
-<partial FName="_ValidationScriptsPartial"/>
+@section Scripts{
+    <partial FName="_ValidationScriptsPartial" />
 }

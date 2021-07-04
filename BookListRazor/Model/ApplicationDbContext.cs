@@ -14,5 +14,7 @@ namespace BookListRazor.Model
         }
 
         public DbSet<Book> Book { get; set; }
+        public DbSet<SurveyEwaste> SurveyEwaste { get; set; }
+
     }
 }

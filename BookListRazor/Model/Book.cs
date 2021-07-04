@@ -20,8 +20,8 @@ namespace BookListRazor.Model
         [Required]
         public string Emailid { get; set; }
 
-        [MaxLength(10, ErrorMessage = "Contact number cannot be longer than 10 characters.")]
-        public long ContactNo { get; set; }
+        //[MaxLength(10, ErrorMessage = "Contact number cannot be longer than 10 characters.")]
+        public string ContactNo { get; set; }
 
         public string line1 { get; set; }
 
@@ -34,7 +34,7 @@ namespace BookListRazor.Model
         public string state { get; set; }
 
         
-        [MaxLength(6, ErrorMessage = "Pincode cannot be longer than 6 characters.")]
-        public int Pincode { get; set; }
+        //[MaxLength(6, ErrorMessage = "Pincode cannot be longer than 6 characters.")]
+        public string Pincode { get; set; }
     }
 }

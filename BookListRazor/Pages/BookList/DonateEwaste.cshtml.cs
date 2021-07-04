@@ -29,7 +29,7 @@ namespace BookListRazor.Pages.BookList
             {
                 await _db.Book.AddAsync(Book);
                 await _db.SaveChangesAsync();
-                return RedirectToPage("SelectDonate");
+                return RedirectToPage("SurveyEwaste");
             }
             else
             {
