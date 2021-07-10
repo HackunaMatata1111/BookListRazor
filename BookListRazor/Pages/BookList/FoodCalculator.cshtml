@@ -1,10 +1,7 @@
 ﻿@page
 @model BookListRazor.Pages.FoodCalculatorModel
 
-<h2 class="text-info">Food-Calculator</h2>
-<br />
-
-<div class="border container" style="padding:30px">
+<div class="border container" style="padding-top:10px;padding-left:100px;">
     <form method="post">
         <div class="row">
             <div class="col-xs-4">
@@ -29,13 +26,13 @@
                             </div>
                         </div>
                         @*<div class="stone">
-                                <label class="label label-info">Quantity: </label>
-                                <div class="stone2">
-                                    <span class="minus glyphicon glyphicon-minus glyphico"></span>
-                                    <input type="text" id="firstMeal" name="firstMeal" value="0" autocomplete="on" />
-                                    <span class="plus  glyphicon glyphicon-plus glyphico"></span>
-                                </div>
-                            </div>*@
+                            <label class="label label-info">Quantity: </label>
+                            <div class="stone2">
+                                <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                <input type="text" id="firstMeal" name="firstMeal" value="0" autocomplete="on" />
+                                <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                            </div>
+                        </div>*@
                     </div>
                     <div class="form-group row stone1">
                         <div>
@@ -199,25 +196,24 @@
             </div>
         </div>
         <br />
-        <div class="container">
-            <div class="text-center" style="line-height:10">
-                @{
-                    var tempval = TempData["SumResult"];
-                    @if (tempval == null)
-                    {
-                        <span>Check Today's Food C02 for Thought</span> //Never displayed
-                    }
-                    else
-                    {
-                        <label class="btn btn-light" Visible="false" id="lbltotal">
-                            Your total Co2 emissions as of today from food is
-                            <b> @TempData["SumResult"] </b> kg.
-                        </label>
-                    }
+        <div class="text-center" style="line-height:5">
+            @{
+                var tempval = TempData["SumResult"];
+                @if (tempval == null)
+                {
+                    <span>Check Today's Food C02 for Thought</span> //Never displayed
                 }
-
-            </div>
+                else
+                {
+                    <label class="btn btn-light" Visible="false" id="lbltotal">
+                        Your total Co2 emissions as of today from food is
+                        <b> @TempData["SumResult"] </b> kg.
+                    </label>
+                }
+            }
         </div>
+        <br />
+        <br />
     </form>
 </div>
 

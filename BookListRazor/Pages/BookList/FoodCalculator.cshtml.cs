@@ -103,9 +103,10 @@ namespace BookListRazor.Pages
 
                 IEnumerable<double> returnCollection = sumTotal.Select(m => m);
                 sum = Math.Round((returnCollection.Sum(m => Convert.ToDouble(m))),2);
-                if (sum > 0)
+                double kilograms = Math.Round(sum * 0.45359237,2);
+                if (kilograms > 0)
                 {
-                    TempData["SumResult"] = sum.ToString();
+                    TempData["SumResult"] = kilograms.ToString();
                 }
 
                 FoodTravelCalculatorCO foodTravelCalculatorCO = new FoodTravelCalculatorCO();

@@ -6,10 +6,11 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/BLT_sandwich_with_blue_cheese.jpg');
-
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/BLT_sandwich_with_blue_cheese.jpg');*/
+    background-image:
     /*background-size: cover;*/
     z-index: 99999;
+    background-image: url('../../Images/cheesesandwich.jpg');
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -22,8 +23,9 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Hainanese_Chicken_Rice%2C_with_fried_egg_and_buttermilk_fried_chicken_skin.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Hainanese_Chicken_Rice%2C_with_fried_egg_and_buttermilk_fried_chicken_skin.jpg');*/
     /*background-size: cover;*/
+    background-image: url('../../Images/eggRice.jpg');
     z-index: 99999;
     position: relative;
     margin-left: auto;
@@ -37,7 +39,8 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Egg_Sandwich_001.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Egg_Sandwich_001.jpg');*/
+    background-image: url('../../Images/eggcheesesandwich.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -52,7 +55,8 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Beef_steak_at_restaurant_Harald.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Beef_steak_at_restaurant_Harald.jpg');*/
+    background-image: url('../../Images/chickensteak.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -67,8 +71,9 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/Cookies_and_milk.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/Cookies_and_milk.jpg');*/
     /*background-size: cover;*/
+    background-image: url('../../Images/milk.jpg');
     z-index: 99999;
     position: relative;
     margin-left: auto;
@@ -82,7 +87,8 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Chicken_%26_veg_soup-3.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Chicken_%26_veg_soup-3.jpg');*/
+    background-image: url('../../Images/chickensoup.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -97,7 +103,8 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/99/Indian_Pulao.JPG');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/99/Indian_Pulao.JPG');*/
+    background-image: url('../../Images/vegrice.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -112,8 +119,9 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Grilled_Chicken_Sandwich.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Grilled_Chicken_Sandwich.jpg');*/
     /*background-size: cover;*/
+    background-image: url('../../Images/chickensandwich.jpg');
     z-index: 99999;
     position: relative;
     margin-left: auto;
@@ -127,7 +135,8 @@
     height: 150px;
     border: 1px solid grey;
     border-radius: 5px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Chicken_sandwich_at_Scotty%27s_Brewhouse.jpg');
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Chicken_sandwich_at_Scotty%27s_Brewhouse.jpg');*/
+    background-image: url('../../Images/chickencheesesandwich.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
