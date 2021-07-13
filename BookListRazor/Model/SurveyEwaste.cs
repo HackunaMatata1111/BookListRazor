@@ -6,14 +6,26 @@ using System.Threading.Tasks;
 
 namespace BookListRazor.Model
 {
+    //public class SurveyEwaste
+    //{
+    //    [Key]
+    //    public int Id { get; set; }
+    //    [Required]
+    //   // public int UserId { get; set; }
+    //    public int question { get; set; }
+    //    public String option { get; set; }
+
+    //}
+
     public class SurveyEwaste
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-       // public int UserId { get; set; }
+        // public int UserId { get; set; }
         public int question { get; set; }
         public String option { get; set; }
-        
+        public int UserId { get; set; }
+
     }
+
 }

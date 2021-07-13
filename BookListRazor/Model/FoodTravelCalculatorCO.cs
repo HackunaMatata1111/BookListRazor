@@ -12,7 +12,7 @@ namespace BookListRazor.Model
         public int Id { get; set; }
 
         [Required]
-        public decimal Co2Footprint { get; set; } //decimal value of calculated footprint saves here
+        public double Co2Footprint { get; set; } //decimal value of calculated footprint saves here
 
         [Required]
         public string FoodIndicator { get; set; } // Values allowed : F/T. T for food, T for travel

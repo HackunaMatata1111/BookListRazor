@@ -1,5 +1,22 @@
 ﻿body {
+    background-image: url("../../img/Deloitte/infrastructure/DEB_8923.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    /*    padding-top: 50px;*/
 }
+
+/*a {
+    color: #86bc24;
+    margin-top: 5px;
+}
+
+    a:hover {
+        color: #86bc24;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+        font-weight: 600;
+        text-decoration: none;
+    }*/
 
 .cheesesandwich {
     width: 250px;
@@ -10,7 +27,7 @@
     background-image:
     /*background-size: cover;*/
     z-index: 99999;
-    background-image: url('../../Images/cheesesandwich.jpg');
+    background-image: url('../../img/Food Grid/cheesesandwich.jpg'); /*~/img/Food Grid/1-CheeseSandwich.png"*/
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +42,7 @@
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Hainanese_Chicken_Rice%2C_with_fried_egg_and_buttermilk_fried_chicken_skin.jpg');*/
     /*background-size: cover;*/
-    background-image: url('../../Images/eggRice.jpg');
+    background-image: url('../../img/Food Grid/eggRice.jpg');
     z-index: 99999;
     position: relative;
     margin-left: auto;
@@ -40,7 +57,7 @@
     border: 1px solid grey;
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Egg_Sandwich_001.jpg');*/
-    background-image: url('../../Images/eggcheesesandwich.jpg');
+    background-image: url('../../img/Food Grid/eggcheesesandwich.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -56,7 +73,7 @@
     border: 1px solid grey;
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Beef_steak_at_restaurant_Harald.jpg');*/
-    background-image: url('../../Images/chickensteak.jpg');
+    background-image: url('../../img/Food Grid/chickensteak.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -73,7 +90,7 @@
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/Cookies_and_milk.jpg');*/
     /*background-size: cover;*/
-    background-image: url('../../Images/milk.jpg');
+    background-image: url('../../img/Food Grid/milk.jpg');
     z-index: 99999;
     position: relative;
     margin-left: auto;
@@ -88,7 +105,7 @@
     border: 1px solid grey;
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Chicken_%26_veg_soup-3.jpg');*/
-    background-image: url('../../Images/chickensoup.jpg');
+    background-image: url('../../img/Food Grid/chickensoup.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -104,7 +121,7 @@
     border: 1px solid grey;
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/99/Indian_Pulao.JPG');*/
-    background-image: url('../../Images/vegrice.jpg');
+    background-image: url('../../img/Food Grid/vegrice.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -121,7 +138,7 @@
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Grilled_Chicken_Sandwich.jpg');*/
     /*background-size: cover;*/
-    background-image: url('../../Images/chickensandwich.jpg');
+    background-image: url('../../img/Food Grid/chickensandwich.jpg');
     z-index: 99999;
     position: relative;
     margin-left: auto;
@@ -136,7 +153,7 @@
     border: 1px solid grey;
     border-radius: 5px;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Chicken_sandwich_at_Scotty%27s_Brewhouse.jpg');*/
-    background-image: url('../../Images/chickencheesesandwich.jpg');
+    background-image: url('../../img/Food Grid/chickencheesesandwich.jpg');
     /*background-size: cover;*/
     z-index: 99999;
     position: relative;
@@ -204,7 +221,7 @@ input {
 }
 
 .glyphico {
-    /*//color: #0F0B0B;*/
+    /*color: #0F0B0B;*/
     color: white;
 }
 
@@ -237,7 +254,7 @@ input {
 
 .img-overlay {
     position: absolute;
-    /*top: 0;*/
+    /*    top: 0;*/
     bottom: 0;
     left: 0;
     right: 0;
@@ -247,8 +264,6 @@ input {
     .img-overlay:before {
         content: ' ';
         display: block;
-        /* adjust 'height' to position overlay content vertically */
+        /*adjust: 'height' to position overlay content vertically */
         height: 50%;
     }
-
-    .
