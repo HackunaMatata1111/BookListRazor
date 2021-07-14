@@ -303,21 +303,26 @@
                 <input type="radio" id="Q10O3" name="Question10" value="3">
                 <label asp-for="SurveyEwaste.option">Option 3</label>
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <input type="radio" id="Q10O4" name="Question10" value="4">
                 <label asp-for="SurveyEwaste.option">Option 4</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
-
-
         <div class="form-group row">
-            <div class="col-3 offset-5">
-                <input type="submit" value="Save & Next" class="btn btn-primary form-control" />
-            </div>
-
+            <div class="col-6">
+                <label>Hmm, wondering if you got all questions right? We hope so too. Let's move forward.</label>
+                @*<a asp-page="/WorldClimate/Readmore" class="btn btn-outline-success form-control">Read more to find out!</a>*@
+            </div>               
         </div>
-    </form>
+
+            <div class="form-group row">
+                <div class="col-3 offset-5">
+                    <input type="submit" value="Save & Next" class="btn btn-success form-control" />
+                </div>
+
+            </div>
+</form>
 
 </div>
 @section Scripts{
