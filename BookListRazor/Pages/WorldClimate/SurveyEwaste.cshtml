@@ -40,69 +40,69 @@
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
 
+        @*--------------------Question2*@
         <div class="form-group row">
-            <div class="col-3">
-                <label asp-for="SurveyEwaste.question">Question 2 : </label>
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question">2.&nbsp;_______________ can be significantly harmed by landfills.</label>
             </div>
             <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-6">
                 <input type="radio" id="Q2O1" name="Question2" value="1">
-                <label asp-for="SurveyEwaste.option">Option 1</label>
+                <label asp-for="SurveyEwaste.option">Only adults</label>
             </div>
             <div class="col-6">
                 <input type="radio" id="Q2O2" name="Question2" value="2">
-                <label asp-for="SurveyEwaste.option">Option 2</label>
+                <label asp-for="SurveyEwaste.option">Only children</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
-
         <div class="form-group row">
             <div class="col-6">
                 <input type="radio" id="Q2O3" name="Question2" value="3">
-                <label asp-for="SurveyEwaste.option">Option 3</label>
+                <label asp-for="SurveyEwaste.option">Both Adults and Children</label>
             </div>
             <div class="col-6">
                 <input type="radio" id="Q2O4" name="Question2" value="4">
-                <label asp-for="SurveyEwaste.option">Option 4</label>
+                <label asp-for="SurveyEwaste.option">Nobody.</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
 
+        @*--------------------Question3*@
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="SurveyEwaste.question">Question 3 : </label>
+                <label asp-for="SurveyEwaste.question">3.&nbsp;An estimated ____________ of mercury is lost annually. <strong>(1 tonne = 1000 kilograms)</strong></label>
             </div>
             <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-6">
                 <input type="radio" id="Q3O1" name="Question3" value="1">
-                <label asp-for="SurveyEwaste.option">Option 1</label>
+                <label asp-for="SurveyEwaste.option">50 tonnes</label>
             </div>
             <div class="col-6">
                 <input type="radio" id="Q3O2" name="Question3" value="2">
-                <label asp-for="SurveyEwaste.option">Option 2</label>
+                <label asp-for="SurveyEwaste.option">10 tonnes</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
-
         <div class="form-group row">
             <div class="col-6">
                 <input type="radio" id="Q3O3" name="Question3" value="3">
-                <label asp-for="SurveyEwaste.option">Option 3</label>
+                <label asp-for="SurveyEwaste.option">60 tonnes</label>
             </div>
             <div class="col-6">
                 <input type="radio" id="Q3O4" name="Question3" value="4">
-                <label asp-for="SurveyEwaste.option">Option 4</label>
+                <label asp-for="SurveyEwaste.option">20 tonnes</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
 
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="SurveyEwaste.question">Question 4 : </label>
+                <label asp-for="SurveyEwaste.question">4._____of the world’s population is covered by a national E-waste policy, legislation, or regulation </label>
             </div>
             <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
@@ -315,7 +315,7 @@
             <div class="col-3 offset-5">
                 <input type="submit" value="Save & Next" class="btn btn-primary form-control" />
             </div>
-            
+
         </div>
     </form>
 
