@@ -94,7 +94,7 @@ namespace BookListRazor.Pages.BookList
             new SubCategory { SubCategoryId = 1, CategoryId = 4, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
             new SubCategory { SubCategoryId = 2, CategoryId = 4, SubCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" },
             new SubCategory { SubCategoryId = 1, CategoryId = 5, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
-            new SubCategory { SubCategoryId = 2, CategoryId = 5, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" }
+            new SubCategory { SubCategoryId = 2, CategoryId = 5, SubCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" }
 
         };
             return subCategories.Where(s => s.CategoryId == categoryId);
