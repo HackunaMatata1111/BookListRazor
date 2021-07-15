@@ -23,8 +23,8 @@ namespace BookListRazor.Pages.BookList
         public IEnumerable<Person> Persons { get; set; }
 
         #region Constant
-        private const double Laptop = 2.457;
-        private const double Mobile = 2.8575;
+        private const double Laptop = 69.0;
+        private const double Mobile = 27.0;
         private const double xyz = 0.612;
         private const double abc = 0.8325;
 
