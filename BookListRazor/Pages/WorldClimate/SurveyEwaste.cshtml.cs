@@ -35,7 +35,7 @@ namespace BookListRazor.Pages.BookList
             {
 
                 SurveyEwaste surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question1"] != string.Empty)
+                if (Request.Form["Question1"] != string.Empty && Request.Form["Question1"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question1"].ToString();
 
@@ -44,12 +44,14 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.option = selectedGender;
                     surveyewaste.UserId = id;
 
+
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
                 }
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question2"] != string.Empty)
+                if (Request.Form["Question2"] != string.Empty && Request.Form["Question2"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question2"].ToString();
 
@@ -59,15 +61,15 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.option = selectedGender;
                     surveyewaste.UserId = id;
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
 
 
                 }
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question3"] != string.Empty)
+                if (Request.Form["Question3"] != string.Empty && Request.Form["Question3"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question3"].ToString();
 
@@ -77,14 +79,14 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.UserId = id;
 
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
 
                 }
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question4"] != string.Empty)
+                if (Request.Form["Question4"] != string.Empty && Request.Form["Question4"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question4"].ToString();
 
@@ -93,15 +95,15 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.option = selectedGender;
                     surveyewaste.UserId = id;
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
 
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question5"] != string.Empty)
+                if (Request.Form["Question5"] != string.Empty && Request.Form["Question5"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question5"].ToString();
 
@@ -111,14 +113,16 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.UserId = id;
 
 
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
+
 
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question6"] != string.Empty)
+                if (Request.Form["Question6"] != string.Empty && Request.Form["Question6"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question6"].ToString();
 
@@ -127,15 +131,15 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.option = selectedGender;
                     surveyewaste.UserId = id;
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
 
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question7"] != string.Empty)
+                if (Request.Form["Question7"] != string.Empty && Request.Form["Question7"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question7"].ToString();
 
@@ -144,15 +148,15 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.option = selectedGender;
                     surveyewaste.UserId = id;
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
 
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question8"] != string.Empty)
+                if (Request.Form["Question8"] != string.Empty && Request.Form["Question8"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question8"].ToString();
 
@@ -162,14 +166,14 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.UserId = id;
 
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question9"] != string.Empty)
+                if (Request.Form["Question9"] != string.Empty && Request.Form["Question9"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question9"].ToString();
 
@@ -179,14 +183,14 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.UserId = id;
 
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 surveyewaste = new SurveyEwaste();
-                if (Request.Form["Question10"] != string.Empty)
+                if (Request.Form["Question10"] != string.Empty && Request.Form["Question10"].Count > 0)
                 {
                     string selectedGender = Request.Form["Question10"].ToString();
 
@@ -195,11 +199,11 @@ namespace BookListRazor.Pages.BookList
                     surveyewaste.UserId = id;
 
 
-
+                    await _db.SurveyEwaste.AddAsync(surveyewaste);
+                    await _db.SaveChangesAsync();
                 }
 
-                await _db.SurveyEwaste.AddAsync(surveyewaste);
-                await _db.SaveChangesAsync();
+
 
                 return RedirectToPage("SelectEwaste");
 
@@ -212,5 +216,6 @@ namespace BookListRazor.Pages.BookList
 
     }
 }
+
 
 

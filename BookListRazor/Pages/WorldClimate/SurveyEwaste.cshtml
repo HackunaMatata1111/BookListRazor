@@ -318,12 +318,31 @@
             </div>
         </div>
 
-        <div class="form-group row">
+        @*<div class="form-group row">
             <div class="col-3 offset-5">
                 <input type="submit" value="Save & Next" class="btn btn-success form-control" />
             </div>
 
-        </div>
+        </div>*@
+        @foreach (var item in Model.Persons)
+        {
+            if (item.Id == Model.Persons.Count())
+            {
+                <div class="col-3 offset-5">
+                    <button asp-page-handler="Submit" asp-route-id="@item.Id" class="btn btn-success form-control">Save & Next</button>
+                </div>
+            }
+        }
+
+
+        @*}
+        else
+        {
+        <p>Nothing available!</p>
+        }*@
+
+
+
     </form>
 
 </div>
