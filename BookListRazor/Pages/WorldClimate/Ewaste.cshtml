@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
+
 <style>
     .carousel-item {
         width: 100%;
@@ -125,45 +126,46 @@
 
 <hr />
 <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-center" id="homecard1">
-                    <img src="~/img/Mockups/mug.png" class="card-img-top img-center" />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center" id="homecard1">
+                <img src="~/img/Mockups/mug.png" class="card-img-top img-center" />
 
-                    <div class="card-body">
-                        <h5 class="card-title">Cool Ceramic Mug</h5>
-                        <p class="card-text">Wake up to your morning coffee with a self appreciation for working towards sustainable living!</p>
-                        <hr />
-                        <a asp-page="WinFreebies" target="_blank">View Full</a>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cool Ceramic Mug</h5>
+                    <p class="card-text">Wake up to your morning coffee with a self appreciation for working towards sustainable living!</p>
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="~/img/Mockups/plantpot.png" class="card-img-top" style="height:270px;"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Friendly Desk plant</h5>
-                        <p class="card-text">A friend on the desk to remind you that climate change is real!</p>
-                        <hr />
-                        <a asp-page="WinFreebies" target="_blank">View Full</a>
-                        @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\WinFreebies.cshtml*@
-                    </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="~/img/Mockups/plantpot.png" class="card-img-top" style="height:270px;" />
+                <div class="card-body">
+                    <h5 class="card-title">Friendly Desk plant</h5>
+                    <p class="card-text">A friend on the desk to remind you that climate change is real!</p>
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
+                    @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\WinFreebies.cshtml*@
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="~/img/Mockups/notebook.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">Your Sustainable Planner</h5>
-                        <p class="card-text">Keep your sustainable plans in check in this planner.</p><br />
-                        <hr />
-                        <a asp-page="WinFreebies" target="_blank">View Full</a>
-                    </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="~/img/Mockups/notebook.png" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Your Sustainable Planner</h5>
+                    <p class="card-text">Keep your sustainable plans in check through this planner.</p><br />
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
                 </div>
             </div>
         </div>
     </div>
-<br /><br />
+</div>
+<br />
+<br />
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -183,13 +185,13 @@
                 <img src="~/img/Mockups/tfront.png" class="card-img-top" style="height:270px;" />
                 <div class="card-body">
                     <h5 class="card-title">Awesome SUS tee(back)!</h5>
-                    <p class="card-text">Show us off! ;)</p>
+                    <p class="card-text">Wear this Tee and flaunt your sustainability! ;)</p>
                     <hr />
                     <a asp-page="WinFreebies" target="_blank">View Full</a>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 <br />
@@ -199,6 +201,6 @@
 </div>
 
 
-    <br />
-    <a asp-page="DonateEwaste" class="btn btn-info form-control text-white align-items-center  ">Let's Get Started</a>
+<br />
+<a asp-page="DonateEwaste" class="btn btn-info form-control text-white align-items-center  ">Let's Get Started</a>
 

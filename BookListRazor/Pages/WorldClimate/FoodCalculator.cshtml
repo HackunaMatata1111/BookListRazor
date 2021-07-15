@@ -219,7 +219,7 @@
                     @*onclick="document.getElementById('firstMeal').value"*@
                 </div>
             </div>
-            <div class="text-center" style="line-height:5">
+            <div class="col-3 offset-4 " style="line-height:5">
                 @{
                     var tempval = TempData["SumResult"];
                     @if (tempval == null)
@@ -229,10 +229,10 @@
                     else
                     {
                         @*<span>Check Today's Food C02 for Thought</span> <br />*@
-                        <label class="btn btn-light" Visible="false" id="lbltotal">
-                            Your total Co2 emissions as of today from food is
-                            <b> @TempData["SumResult"] </b> kg.
-                        </label>
+                <label class="btn btn-light" Visible="false" id="lbltotal">
+                    Your total Co2 emissions as of <br /> today from food is
+                    <b> @TempData["SumResult"] </b> kg.
+                </label>
                     }
                 }
             </div>

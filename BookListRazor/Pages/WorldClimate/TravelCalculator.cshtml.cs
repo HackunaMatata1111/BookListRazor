@@ -5,132 +5,181 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
 using BookListRazor.Model;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BookListRazor.Pages.BookList
 {
     public class TravelCategory : PageModel
     {
+        #region private
         private readonly ApplicationDbContext _db;
+
+        //private ICategoryService categoryService;
+
+        private const double auto = 0.8347;
+        private const double uberPremier = 1.5419;
+        private const double uberGo = 1.1126;
+        private const double bus = 0.1713;
+        private const double train = 0.0214;
+
+        #endregion
 
         public TravelCategory(ApplicationDbContext db)
         {
             _db = db;
         }
 
+
+
         //[BindProperty]
         //public FoodTravelCalculatorCO FoodTravelCalculatorCO { get; set; }
 
 
-        #region Constant
+        //[ActivatorUtilitiesConstructor]
+        //public CascadingDropdownsModelModel(ICategoryService categoryService) => this.categoryService = categoryService;
 
-        //private const double cheeseSandwich = 2.73;
-        //private const double eggCheeseSandwich = 3.62;
-        //private const double chickenSoup = 1.36;
-        //private const double eggRice = 1.05;
-        //private const double chickenCheeseSandwich = 3.99;
-        //private const double chickenSandwich = 1.54;
-        //private const double chickenSteak = 2.03;
-        //private const double vegRice = 0.26;
-        //private const double milk = 0.72;
-        private const double cheeseSandwich = 2.457;
-        private const double eggCheeseSandwich = 2.8575;
-        private const double chickenSoup = 0.612;
-        private const double eggRice = 0.8325;
-        private const double chickenCheeseSandwich = 3.024;
-        private const double chickenSandwich = 0.819;
-        private const double chickenSteak = 0.9135;
-        private const double vegRice = 0.477;
-        private const double milk = 0.324;
+        [BindProperty(SupportsGet = true)]
+        public int CategoryId { get; set; }
+        public int SubCategoryId { get; set; }
 
-        #endregion
+        public int ThirdCategoryId { get; set; }
+        public SelectList Categories { get; set; }
+
+        public SelectList Arrival { get; set; }
+
+        public SelectList Departure { get; set; }
 
         public void OnGet()
         {
+            List<Category> categories = new List<Category>
+            {
+                new Category { CategoryId = 1, CategoryName="Auto" },
+                new Category { CategoryId = 2, CategoryName="Uber Premium" },
+                new Category { CategoryId = 3, CategoryName="Uber Go" },
+                new Category { CategoryId = 4, CategoryName="Bus" },
+                new Category { CategoryId = 5, CategoryName="Train" }
+            };
+
+            List<Arrival> arrivals = new List<Arrival>
+            {
+                new Arrival { CategoryId = 1, CategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+                new Arrival { CategoryId = 2, CategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" }
+            };
+
+            List<Departure> departures = new List<Departure>
+            {
+                new Departure { CategoryId = 1, CategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+                new Departure { CategoryId = 2, CategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" }
+            };
+
+
+
+            Categories = new SelectList(categories, nameof(Category.CategoryId), nameof(Category.CategoryName));
+            Arrival = new SelectList(arrivals, nameof(Category.CategoryId), nameof(Category.CategoryName));
+            Departure = new SelectList(departures, nameof(Category.CategoryId), nameof(Category.CategoryName));
+            //Categories = new SelectList(categoryService.GetCategories(), nameof(Category.CategoryId), nameof(Category.CategoryName));
+            //Arrival = new SelectList(categoryService.GetArrival(), nameof(Category.CategoryId), nameof(Category.CategoryName));
+            //Departure = new SelectList(categoryService.GetDeparture(), nameof(Category.CategoryId), nameof(Category.CategoryName));
         }
 
-        public IActionResult OnPostSellProduct()
+        public IEnumerable<SubCategory> GetSubCategories(int categoryId)
+        {
+            var subCategories = new List<SubCategory> {
+            new SubCategory { SubCategoryId = 1, CategoryId = 1, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+            new SubCategory { SubCategoryId = 2, CategoryId = 1, SubCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" },
+            new SubCategory { SubCategoryId = 1, CategoryId = 2, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+            new SubCategory { SubCategoryId = 2, CategoryId = 2, SubCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" },
+            new SubCategory { SubCategoryId = 1, CategoryId = 3, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+            new SubCategory { SubCategoryId = 2, CategoryId = 3, SubCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" },
+            new SubCategory { SubCategoryId = 1, CategoryId = 4, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+            new SubCategory { SubCategoryId = 2, CategoryId = 4, SubCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" },
+            new SubCategory { SubCategoryId = 1, CategoryId = 5, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" },
+            new SubCategory { SubCategoryId = 2, CategoryId = 5, SubCategoryName="Hiranandani Fairmont (USI Mumbai office)" }
+
+        };
+            return subCategories.Where(s => s.CategoryId == categoryId);
+        }
+
+        public IEnumerable<ThirdCategory> GetThirdCategories(int subCategoryId)
+        {
+            var thirdCategories = new List<ThirdCategory> {
+            new ThirdCategory { ThirdCategoryId = 2, SubCategoryId = 1, ThirdCategoryName="Kharghar, Navi mumbai (USI-Mumbai Home)" },
+            new ThirdCategory { ThirdCategoryId = 1, SubCategoryId = 2, ThirdCategoryName="Hiranandani Fairmont (USI Mumbai office)" }
+        };
+            return thirdCategories.Where(s => s.SubCategoryId == subCategoryId);
+        }
+
+
+        public JsonResult OnGetSubCategories()
+        {
+            return new JsonResult(GetSubCategories(CategoryId));
+        }
+
+        public JsonResult OnGetThirdCategories()
+        {
+            return new JsonResult(GetThirdCategories(CategoryId));
+        }
+
+        //public IActionResult GetMessage()
+        //{
+        //    string message = "Welcome";
+        //    return new ActionResult(message);// { Data = message, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        //}
+
+        public IActionResult OnPostSellProduct1()
         {
             if (ModelState.IsValid)
             {
                 double sum = 0;
                 List<double> sumTotal = new List<double>();
 
-                string item1 = Request.Form["cheesesandwich"];
-                if(!string.IsNullOrEmpty(item1))
+                //int?  min = int.Parse(Request.Form["Categories"]);
+                int i = 0;
+                int.TryParse(Convert.ToString(Request.Form["Categories"]), out i); // Convert textfield value
+                int? travelId = (i > 0 ? (int?)i : null);
+
+                switch (travelId)
                 {
-                    //sum = sum + (Convert.ToDouble(item1) * cheeseSandwich);
-                    sumTotal.Add(Convert.ToDouble(item1) * cheeseSandwich);
+                    case 1:
+                        sum = auto;
+                        break;
+                    case 2:
+                        sum = uberPremier;
+                        break;
+                    case 3:
+                        sum = uberGo;
+                        break;
+                    case 4:
+                        sum = bus;
+                        break;
+                    case 5:
+                        sum = train;
+                        break;
                 }
 
-                string item2 = Request.Form["eggcheesesandwich"];
-                if (!string.IsNullOrEmpty(item2))
+                sum = Math.Round(sum, 2);
+                if (sum > 0)
                 {
-                    sumTotal.Add(Convert.ToDouble(item2) * eggCheeseSandwich);
+                    TempData["SumResult"] = sum.ToString();
                 }
 
-                string item3 = Request.Form["chickensoup"];
-                if (!string.IsNullOrEmpty(item3))
-                {
-                    sumTotal.Add(Convert.ToDouble(item3) * chickenSoup);
-                }
-
-                string item4 = Request.Form["eggRice"];
-                if (!string.IsNullOrEmpty(item4))
-                {
-                    sumTotal.Add(Convert.ToDouble(item4) * eggRice);
-                }
-
-                string item5 = Request.Form["chickencheesesandwich"];
-                if (!string.IsNullOrEmpty(item5))
-                {
-                    sumTotal.Add(Convert.ToDouble(item5) * chickenCheeseSandwich);
-                }
-
-                string item6 = Request.Form["chickensandwich"];
-                if (!string.IsNullOrEmpty(item6))
-                {
-                    sumTotal.Add(Convert.ToDouble(item6) * chickenSandwich);
-                }
-
-                string item7 = Request.Form["chickensteak"];
-                if (!string.IsNullOrEmpty(item7))
-                {
-                    sumTotal.Add(Convert.ToDouble(item7) * chickenSteak);
-                }
-
-                string item8 = Request.Form["vegrice"];
-                if (!string.IsNullOrEmpty(item8))
-                {
-                    sumTotal.Add(Convert.ToDouble(item8) * vegRice);
-                }
-
-                string item9 = Request.Form["milk"];
-                if (!string.IsNullOrEmpty(item9))
-                {
-                    sumTotal.Add(Convert.ToDouble(item9) * milk);
-                }
-
-                IEnumerable<double> returnCollection = sumTotal.Select(m => m);
-                double bindTotal = Math.Round((returnCollection.Sum(m => Convert.ToDouble(m))), 4);
-                if (bindTotal > 0)
-                {
-                    TempData["SumResult"] = bindTotal.ToString();
-                }
-
-                //double bindTotal = sum * 0.45;
-                ////double bindTotal = Math.Round(sum * 0.45,2);
-                //if (bindTotal > 0)
-                //{
-                //    TempData["SumResult"] = bindTotal.ToString();
-                //}
 
                 FoodTravelCalculatorCO foodTravelCalculatorCO = new FoodTravelCalculatorCO();
-                foodTravelCalculatorCO.Co2Footprint = bindTotal;
-                //foodTravelCalculatorCO.Co2Footprint = Convert.ToDecimal(bindTotal);
-                foodTravelCalculatorCO.FoodIndicator = "F";
+                foodTravelCalculatorCO.Co2Footprint = sum;
+                //foodTravelCalculatorCO.Co2Footprint = Convert.ToDecimal(sum);
+                foodTravelCalculatorCO.FoodIndicator = "T";
+                foodTravelCalculatorCO.ColumnFour = DateTime.Now.ToString();
                 _db.FoodTravelCalculatorCO.Add(foodTravelCalculatorCO);
                 _db.SaveChanges();
 
+                //FoodTravelCalculatorCO foodTravelCalculatorCO = new FoodTravelCalculatorCO();
+                ////foodTravelCalculatorCO.Id = _db.FoodTravelCalculatorCO.Max(x => x.Id) + 1;
+                //foodTravelCalculatorCO.Co2Footprint = Convert.ToDecimal(sum);
+                //foodTravelCalculatorCO.FoodIndicator = "T";
+                //foodTravelCalculatorCO.ColumnFour = DateTime.Now.ToString();
+                //_db.FoodTravelCalculatorCO.Add(foodTravelCalculatorCO);
+                //_db.SaveChanges();
+                OnGet();
             }
             return Page();
 

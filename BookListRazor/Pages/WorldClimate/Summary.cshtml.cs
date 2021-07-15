@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,21 +10,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookListRazor.Pages.BookList
 {
-    public class IndexModel : PageModel
+    public class SummaryModel : PageModel
     {
         private readonly ApplicationDbContext _db;
-        public IndexModel(ApplicationDbContext db)
+        public SummaryModel(ApplicationDbContext db)
         {
             _db = db;
         }
 
-        public IEnumerable<Book> Books { get; set; }
+        public IEnumerable<Person> Persons { get; set; }
 
         public IEnumerable<SelectEwaste> SelectEwastes { get; set; }
 
         public async Task OnGet()
         {
-            Books = await _db.Book.ToListAsync();
+            Persons = await _db.Person.ToListAsync();
 
             SelectEwastes = await _db.SelectEwaste.ToListAsync();
         }
@@ -32,12 +32,12 @@ namespace BookListRazor.Pages.BookList
 
         public async Task<IActionResult> OnPostDelete(int id)
         {
-            var book = await _db.Book.FindAsync(id);
-            if (book == null)
+            var person = await _db.Person.FindAsync(id);
+            if (person == null)
             {
                 return NotFound();
             }
-            _db.Book.Remove(book);
+            _db.Person.Remove(person);
             await _db.SaveChangesAsync();
             return RedirectToPage("Index");
         }

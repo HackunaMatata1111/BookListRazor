@@ -9,10 +9,10 @@
     <form method="post">
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         @*--------------------Question1*@
-        
+
         <div class="form-group row">
             <div class="col-12">
-                <label asp-for="SurveyEwaste.question"><strong>1. Which of the following element/s is/are cause of e-waste?</strong> </label>
+                <label asp-for="SurveyEwaste.question"><strong>1. Which of the following element(s) is/are cause of E-waste?</strong> </label>
             </div>
             <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
@@ -254,18 +254,18 @@
         @*--------------------Question9*@
         <div class="form-group row">
             <div class="col-12">
-                <label asp-for="SurveyEwaste.question"><strong>9. It takes ____ of fossil fuel, ___  of chemicals, and ___ of water to manufacture one computer and monitor.</strong></label>
+                <label asp-for="SurveyEwaste.question"><strong>9. It takes ____ of fossil fuel, ____  of chemicals, and ____ of water to manufacture one computer and monitor.</strong></label>
             </div>
             <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-6">
                 <input type="radio" id="Q9O1" name="Question9" value="1">
-                <label asp-for="SurveyEwaste.option">300 lbs, 50 lbs, 3 tons </label>
+                <label asp-for="SurveyEwaste.option">300lbs, 50lbs, 3 tons </label>
             </div>
             <div class="col-6">
                 <input type="radio" id="Q9O2" name="Question9" value="2">
-                <label asp-for="SurveyEwaste.option">200lbs, 40 lbs, 2 tons</label>
+                <label asp-for="SurveyEwaste.option">200lbs, 40lbs, 2 tons</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
@@ -273,11 +273,11 @@
         <div class="form-group row">
             <div class="col-6">
                 <input type="radio" id="Q9O3" name="Question9" value="3">
-                <label asp-for="SurveyEwaste.option">530 lbs , 48 , and 1.5 tons</label>
+                <label asp-for="SurveyEwaste.option">530lbs, 48lbs, and 1.5 tons</label>
             </div>
             <div class="col-6">
                 <input type="radio" id="Q9O4" name="Question9" value="4">
-                <label asp-for="SurveyEwaste.option">400 lbs, 20lbs, 1ton</label>
+                <label asp-for="SurveyEwaste.option">400lbs, 20lbs, 1ton</label>
             </div>
             <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
         </div>
@@ -315,18 +315,20 @@
             <div class="col-12">
                 <label><strong>Hmm, wondering if you got all questions right? We hope so too. Let's move forward.</strong></label>
                 @*<a asp-page="/WorldClimate/Readmore" class="btn btn-outline-success form-control">Read more to find out!</a>*@
-            </div>               
+            </div>
         </div>
 
-            <div class="form-group row">
-                <div class="col-3 offset-5">
-                    <input type="submit" value="Save & Next" class="btn btn-success form-control" />
-                </div>
-
+        <div class="form-group row">
+            <div class="col-3 offset-5">
+                <input type="submit" value="Save & Next" class="btn btn-success form-control" />
             </div>
-</form>
+
+        </div>
+    </form>
 
 </div>
+
+
 @section Scripts{
     <partial FName="_ValidationScriptsPartial" />
 }

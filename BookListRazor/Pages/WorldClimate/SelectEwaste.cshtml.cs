@@ -84,7 +84,7 @@ namespace BookListRazor.Pages.BookList
                 _db.SaveChanges();
 
 
-                return RedirectToPage("Index");
+                return RedirectToPage("Summary");
             }
             else
             {
