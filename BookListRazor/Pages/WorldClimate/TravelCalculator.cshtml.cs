@@ -53,7 +53,7 @@ namespace BookListRazor.Pages.BookList
         {
             List<Category> categories = new List<Category>
             {
-                new Category { CategoryId = 1, CategoryName="Auto" },
+                new Category { CategoryId = 1, CategoryName="Auto-Rickshaw" },
                 new Category { CategoryId = 2, CategoryName="Uber Premium" },
                 new Category { CategoryId = 3, CategoryName="Uber Go" },
                 new Category { CategoryId = 4, CategoryName="Bus" },
