@@ -92,10 +92,11 @@
                 {@*<label asp-for="Books.FirstOrDefault().Id"></label>*@
                 @foreach (var item in Model.Persons)
                 {
-                    if (item.Id == Model.Persons.Count())
+                    if (item.Id == Model.Persons.OrderByDescending(y => y.Id).Select(x => x.Id).FirstOrDefault())
                     {
-
-                        <button asp-page-handler="Submit" asp-route-id="@item.Id" class="btn btn-success" onclick="return ">Donate</button> @*confirm('Please click ok to donate')*@
+                        <div class="col-3" style="margin-left: -36px;">
+                        <button asp-page-handler="Submit" asp-route-id="@item.Id" class="btn btn-success form-control" onclick="return ">Donate</button> @*confirm('Please click ok to donate')*@
+                            </div>
                     }
                 }
             }

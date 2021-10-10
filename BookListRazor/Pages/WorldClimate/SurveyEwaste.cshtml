@@ -164,7 +164,7 @@
         @*--------------------Question6*@
         <div class="form-group row">
             <div class="col-12">
-                <label asp-for="SurveyEwaste.question"><strong>6. Recycling how many laptops is equivalent to saving energy equivalent to the energy used by 3500 homes in US annually?</strong></label>
+                <label asp-for="SurveyEwaste.question"><strong>6. Recycling how many laptops is equivalent to saving energy used by 3500 homes in US annually?</strong></label>
             </div>
             <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
         </div>
@@ -318,12 +318,7 @@
             </div>
         </div>
 
-        @*<div class="form-group row">
-            <div class="col-3 offset-5">
-                <input type="submit" value="Save & Next" class="btn btn-success form-control" />
-            </div>
 
-        </div>*@
         @foreach (var item in Model.Persons)
         {
             if (item.Id == Model.Persons.Count())
@@ -333,7 +328,14 @@
                 </div>
             }
         }
-
+        <div class="form-group row">
+            @*<div class="col-3 offset-5">
+                <input type="submit" value="Save & Next" class="btn btn-success form-control" />
+            </div>*@
+            <div class="col-3 offset-5">
+                <a asp-page="/WorldClimate/DonateEwaste" class="btn btn-outline-success form-control">Previous</a> @*text-white*@
+            </div>
+        </div>
 
         @*}
         else
